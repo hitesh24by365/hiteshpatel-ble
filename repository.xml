@@ -16,7 +16,7 @@
             <sdk:archive os="any">
                 <sdk:size>224190</sdk:size>
                 <sdk:checksum type="sha1">d6958f86fd3376527c6cd1fdc7992daa111c8b1f</sdk:checksum>
-                <sdk:url>OpenBleApi_r02.zip</sdk:url>
+                <sdk:url>http://broadcom-ble.googlecode.com/files/OpenBleApi_r02.zip</sdk:url>
             </sdk:archive>
         </sdk:archives>
         <sdk:libs>
