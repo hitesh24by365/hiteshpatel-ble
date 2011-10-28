@@ -20,7 +20,6 @@ package com.broadcom.apps.blefindmeclient;
 import android.bluetooth.BluetoothDevice;
 import android.content.Context;
 import android.content.Intent;
-import android.os.ParcelUuid;
 import android.util.Log;
 
 import java.util.ArrayList;
@@ -28,6 +27,7 @@ import java.util.ArrayList;
 import com.broadcom.bt.le.api.BleClientProfile;
 import com.broadcom.bt.le.api.BleClientService;
 import com.broadcom.bt.le.api.BleCharacteristic;
+import com.broadcom.bt.le.api.BleGattID;
 
 public class FindMeProfileClient extends BleClientProfile {
     private static String TAG = "FindMeProfileClient";
@@ -39,8 +39,8 @@ public class FindMeProfileClient extends BleClientProfile {
     public final static int ALERT_LEVEL_LOW = 1;
     public final static int ALERT_LEVEL_HIGH = 2;
 
-    static ParcelUuid myUuid = ParcelUuid
-            .fromString("00001802-1112-2223-8000-00805f9b34fb");
+    private static final BleGattID myUuid = new BleGattID("00001802-1112-2223-8000-00805f9b34fb");
+    private static final BleGattID ALERT_LEVEL_CHARACTERISTIC = new BleGattID("00002a06-0000-1000-8000-00805f9b34fb");
 
 	private ImmediateAlertServiceClient mImmediateAlertService = new ImmediateAlertServiceClient();
     private Context mContext = null;
@@ -63,14 +63,13 @@ public class FindMeProfileClient extends BleClientProfile {
     }
 
 	public void alert(BluetoothDevice device) {
-		ArrayList<BleCharacteristic> characteristics = mImmediateAlertService
-				.getAllCharacteristics(device, 0);
+        BleCharacteristic alertLevelCharacteristic = 
+                    mImmediateAlertService.getCharacteristic(device, ALERT_LEVEL_CHARACTERISTIC);
 
 		byte[] value = { FindMeProfileClient.ALERT_LEVEL_HIGH };
-		characteristics.get(0).setValue(value);
+		alertLevelCharacteristic.setValue(value);
 
-		mImmediateAlertService.writeCharacteristic(device, 0, characteristics
-				.get(0));
+		mImmediateAlertService.writeCharacteristic(device, 0, alertLevelCharacteristic);
 	}
     
     public void onInitialized(boolean success) {
