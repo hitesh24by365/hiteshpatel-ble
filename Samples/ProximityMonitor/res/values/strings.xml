@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+ *
+ *  Copyright (C) 2009-2011 Broadcom Corporation
+ *
+ *  Licensed under the Apache License, Version 2.0 (the "License");
+ *  you may not use this file except in compliance with the License.
+ *  You may obtain a copy of the License at
+ *
+ *      http://www.apache.org/licenses/LICENSE-2.0
+ *
+ *  Unless required by applicable law or agreed to in writing, software
+ *  distributed under the License is distributed on an "AS IS" BASIS,
+ *  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ *  See the License for the specific language governing permissions and
+ *  limitations under the License.
+ *
+ -->
+<resources>
+    <string name="app_name">Proximity Monitor</string>
+
+    <!--  DeviceListActivity -->
+	<string name="add_a_device">Add a device</string>
+    <string name="devices">Devices</string>
+    <string name="status_connected">Connected</string>
+    <string name="status_not_connected">Not connected</string>
+	
+    <string name="send">Send</string>
+    <string name="bt_not_enabled_leaving">Bluetooth was not enabled. Exiting</string>
+    <string name="title_connecting">Connecting...</string>
+
+    <string name="scanning">Scanning for devices...</string>
+    <string name="select_device">Please select a device:</string>
+    <string name="title_other_devices">Other available headsets</string>
+	
+	<string name="settings_show_location">Show location</string>
+	<string name="settings_findme">FindMe</string>
+	<string name="settings_no_data">No data</string>
+	
+	<string name="enabled">Enabled</string>
+	<string name="keyfob_action">Keyfob action</string>
+	<string name="phone_action">Phone action</string>
+	<string name="local_link_loss_play_sound"> Play sound</string>
+	<string name="local_link_loss_sound_name"> Sound:</string>
+	<string name="local_link_loss_vibrate">Vibrate</string>
+	<string name="remote_link_loss_play_alert">Alert</string>
+	<string name="select_local_link_loss_alert">Select local link loss alert</string>
+	<string name="alert">Alert</string>
+	<string name="locate">Locate</string>
+	
+	<string name="map_timestamp_prefix">This device was last connected on </string>
+	<string name="map_timestamp_suffix"> at this location:</string>
+	
+	<string name="context_menu_remove">Remove</string>
+	<string name="set_nickname">&lt;Set Nickname&gt;</string>
+	<string name="set_nickname_dialog_title">Set Nickname</string>
+	
+	<string name="notification_title_connected">Proximity Monitor</string>
+	<string name="notification_title_disconnected">Proximity Monitor</string>
+	<string name="notification_body_prefix_connected">Connection with &quot;</string>
+	<string name="notification_body_suffix_connected">&quot; established.</string>
+	<string name="notification_body_prefix_disconnected">Connection with &quot;</string>
+	<string name="notification_body_suffix_disconnected">&quot; lost.</string>
+	
+</resources>

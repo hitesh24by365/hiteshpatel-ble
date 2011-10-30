@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+ *
+ *  Copyright (C) 2009-2011 Broadcom Corporation
+ *
+ *  Licensed under the Apache License, Version 2.0 (the "License");
+ *  you may not use this file except in compliance with the License.
+ *  You may obtain a copy of the License at
+ *
+ *      http://www.apache.org/licenses/LICENSE-2.0
+ *
+ *  Unless required by applicable law or agreed to in writing, software
+ *  distributed under the License is distributed on an "AS IS" BASIS,
+ *  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ *  See the License for the specific language governing permissions and
+ *  limitations under the License.
+ *
+ -->
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/key_bg">
+
+    <LinearLayout android:orientation="vertical"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content">
+
+        <TextView android:id="@+id/name_1"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:textColor="#FFFFFF"
+            android:textSize="24dip"
+            android:layout_marginLeft="50dip"
+            android:layout_marginTop="30dip"
+        />
+
+        <TextView android:id="@+id/name_2"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:textColor="#808080"
+            android:textSize="18dip"
+            android:layout_marginLeft="50dip"
+        />
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content">
+
+            <TextView android:text="@string/enabled"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_alignParentLeft="true"
+                android:layout_marginLeft="32dip"
+                android:textSize="20dip"
+                android:textColor="#FFF"
+            />
+
+            <CheckBox android:id="@+id/device_enabled"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="16dip"
+            />
+        </RelativeLayout>
+
+        <RelativeLayout android:id="@+id/alert"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/button_bg">
+
+            <ImageView android:id="@+id/icon"
+                android:src="@drawable/ic_menu_notifications"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_alignParentLeft="true"
+                android:padding="5dip"
+            />
+            <TextView android:text="@string/alert"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@id/icon"
+                android:textSize="24dip"
+                android:textColor="#FFF"
+            />
+        </RelativeLayout>
+
+        <RelativeLayout android:id="@+id/locate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/button_bg">
+
+            <ImageView android:id="@+id/icon"
+                android:src="@android:drawable/ic_menu_compass"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_alignParentLeft="true"
+                android:padding="5dip"
+            />
+
+            <TextView android:text="@string/locate"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@id/icon"
+                android:textSize="24dip"
+                android:textColor="#FFF"
+            />
+        </RelativeLayout>
+
+        <TextView android:text="@string/keyfob_action"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="24dip"
+            android:textColor="#FFF"
+            android:layout_marginLeft="16dip"
+        />
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content" >
+
+            <TextView android:text="@string/remote_link_loss_play_alert"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_alignParentLeft="true"
+                android:layout_marginLeft="32dip"
+                android:textSize="20dip"
+                android:textColor="#FFF"
+            />
+
+            <CheckBox android:id="@+id/remote_link_loss_play_alert"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="16dip"
+            />
+        </RelativeLayout>
+
+        <TextView android:text="@string/phone_action"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="24dip"
+            android:textColor="#FFF"
+            android:layout_marginLeft="16dip"
+        />
+
+        <RelativeLayout
+            android:layout_width="fill_parent" android:layout_height="wrap_content" >
+
+            <TextView android:text="@string/local_link_loss_play_sound"
+                android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:layout_centerVertical="true" android:layout_alignParentLeft="true" android:layout_marginLeft="32dip"
+                android:textSize="20dip" android:textColor="#FFF"/>
+
+            <CheckBox android:id="@+id/local_link_loss_play_sound"
+                android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:layout_centerVertical="true" android:layout_alignParentRight="true" android:layout_marginRight="16dip"/>
+        </RelativeLayout>
+
+        <RelativeLayout android:id="@+id/pick_local_link_loss_sound"
+            android:layout_width="fill_parent" android:layout_height="wrap_content" >
+
+            <TextView android:text="@string/local_link_loss_sound_name"
+                android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:layout_centerVertical="true" android:layout_alignParentLeft="true" android:layout_marginLeft="32dip"
+                android:textSize="20dip" android:textColor="#FFF"/>
+
+            <TextView android:id="@+id/local_link_loss_sound_name"
+                android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:layout_centerVertical="true" android:layout_alignParentRight="true" android:layout_marginRight="16dip"
+                android:textSize="14dip" android:textColor="#FFF"/>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="fill_parent" android:layout_height="wrap_content" >
+
+            <TextView android:text="@string/local_link_loss_vibrate"
+                android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:layout_centerVertical="true" android:layout_alignParentLeft="true" android:layout_marginLeft="32dip"
+                android:textSize="20dip" android:textColor="#FFF"/>
+
+            <CheckBox android:id="@+id/local_link_loss_vibrate"
+                android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:layout_centerVertical="true" android:layout_alignParentRight="true" android:layout_marginRight="16dip"/>
+        </RelativeLayout>
+    </LinearLayout>
+</ScrollView>
