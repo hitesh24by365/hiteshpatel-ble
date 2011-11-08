@@ -29,7 +29,7 @@ import com.broadcom.bt.le.api.BleServerProfile;
 import com.broadcom.bt.le.api.BleServerService;
 
 public class TimeProfileServer extends BleServerProfile {
-    private static String TAG = "FindMeProfileServer";
+    private static String TAG = "TimeProfileServer";
 
     public static final String CLIENT_CONNECTED    = "com.broadcom.action.timeprofile_client_connected";
     public static final String CLIENT_DISCONNECTED = "com.broadcom.action.timeprofile_client_disconnected";
@@ -51,15 +51,15 @@ public class TimeProfileServer extends BleServerProfile {
         super(context, new BleGattID(myUuid), services);
         mContext = context;
         mServices = services;
-        Log.d(TAG, "FindMeProfileServer()");
+        Log.d(TAG, "Constructor()");
     }
 
     @Override
     public void onInitialized(boolean initialized) {
         Log.d(TAG, "onInitialized(" + initialized + ")");
 
-        CurrentTimeService immediateAlertService = (CurrentTimeService) mServices.get(0);
-        immediateAlertService.addCurrentTimeCharacteristic();
+        CurrentTimeService timeService = (CurrentTimeService) mServices.get(0);
+        timeService.addCurrentTimeCharacteristic();
 
         startProfile();
     }
@@ -98,5 +98,4 @@ public class TimeProfileServer extends BleServerProfile {
     public void onStopped() {
         Log.d(TAG, "onStopped()");
     }
-
 }

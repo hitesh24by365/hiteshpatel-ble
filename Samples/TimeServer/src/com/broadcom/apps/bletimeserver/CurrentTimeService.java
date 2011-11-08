@@ -29,10 +29,7 @@ import com.broadcom.bt.le.api.BleGattID;
 import com.broadcom.bt.le.api.BleServerService;
 
 public class CurrentTimeService extends BleServerService {
-    public static String TAG = "ImmediateAlertService";
-
-    public static final String FINDME_ALERT = "com.broadcom.action.findme_immediatealert";
-    public static final String ALERT_LEVEL = "alert_level";
+    public static String TAG = "CurrentTimeService";
 
     private static final String SERVICE_UUID                     = "00001805-0000-1000-8000-00805f9b34fb";
     private static final String CURRENT_TIME_CHARACTERISTIC_UUID = "00002a2b-0000-1000-8000-00805f9b34fb";
@@ -44,7 +41,7 @@ public class CurrentTimeService extends BleServerService {
     public CurrentTimeService(Context context) {
         super(new BleGattID(SERVICE_UUID), NUM_HANDLES);
         mContext = context;
-        Log.d(TAG, "ImmediateAlertService()");
+        Log.d(TAG, "Constructor()");
     }
 
     void addCurrentTimeCharacteristic() {

@@ -95,7 +95,7 @@ public class BleTimeServerActivity extends Activity {
             init();
         }
 
-        /* Register FindMe event receivers */
+        /* Register event receivers */
         IntentFilter filter = new IntentFilter();
         filter.addAction(TimeProfileServer.CLIENT_CONNECTED);
         filter.addAction(TimeProfileServer.CLIENT_DISCONNECTED);
