@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">BLE Blood Pressure</string>
+
+    <string name="device_branding_line1">BLUETOOTH LE</string>
+    <string name="device_branding_line2">Blood Pressure Monitor</string>
+    
+    <string name="sys1">SYS.</string>
+    <string name="sys2">mmHg</string>
+    <string name="dia1">DIA.</string>
+    <string name="dia2">mmHg</string>
+    <string name="pul1">PUL.</string>
+    <string name="pul2">bpm</string>
+</resources>

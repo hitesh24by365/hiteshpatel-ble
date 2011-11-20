@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent" android:layout_height="fill_parent"
+    android:background="#efd7bd"
+    >
+	
+	<LinearLayout android:orientation="vertical"
+    android:layout_width="fill_parent" android:layout_height="fill_parent"
+	android:layout_margin="12dip"
+    android:background="@drawable/main"
+	>	
+
+		<View	
+		    android:layout_width="fill_parent" android:layout_height="0px" android:layout_weight="10"
+		/>
+
+		<LinearLayout android:orientation="horizontal"
+		    android:layout_width="fill_parent" android:layout_height="0px" android:layout_weight="60"
+		>
+
+			<View	
+			    android:layout_width="0px" android:layout_height="fill_parent" android:layout_weight="10"
+			/>
+			<LinearLayout android:orientation="vertical"
+			    android:layout_width="0px" android:layout_height="fill_parent" android:layout_weight="50"
+			    android:background="@drawable/lcd"
+			>
+				<TextView android:id="@+id/sys"
+				    android:layout_width="wrap_content" android:layout_height="0px" android:layout_weight="33"
+				    android:textColor="#000" android:textSize="72dip"
+				    android:layout_gravity="center_vertical|right" android:paddingRight="24dip"
+				    android:paddingTop="8dip"
+				/>
+				<TextView android:id="@+id/dia"
+				    android:layout_width="wrap_content" android:layout_height="0px" android:layout_weight="33"
+				    android:textColor="#000" android:textSize="72dip"
+				    android:layout_gravity="center_vertical|right" android:paddingRight="24dip"
+				    android:paddingTop="8dip"
+				/>
+				<TextView android:id="@+id/pul"
+				    android:layout_width="wrap_content" android:layout_height="0px" android:layout_weight="33"
+				    android:textColor="#000" android:textSize="72dip"
+				    android:layout_gravity="center_vertical|right" android:paddingRight="24dip"
+				    android:paddingTop="8dip"
+				/>
+			</LinearLayout>
+
+			<LinearLayout android:orientation="vertical"
+			    android:layout_width="0px" android:layout_height="fill_parent" android:layout_weight="40"
+			>
+
+				<TextView
+				    android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_weight="0"
+				    android:textColor="#FFF" android:textSize="24dip" android:text="@string/sys1"
+				    android:layout_gravity="top|left" android:paddingLeft="12dip"
+				/>		
+				<TextView
+				    android:layout_width="wrap_content" android:layout_height="0px" android:layout_weight="33"
+				    android:textColor="#FFF" android:textSize="16dip" android:text="@string/sys2"
+				    android:layout_gravity="top|left" android:paddingLeft="12dip"
+				/>		
+				<TextView
+				    android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_weight="0"
+				    android:textColor="#FFF" android:textSize="24dip" android:text="@string/dia1"
+				    android:layout_gravity="top|left" android:paddingLeft="12dip"
+				/>		
+				<TextView
+				    android:layout_width="wrap_content" android:layout_height="0px" android:layout_weight="33"
+				    android:textColor="#FFF" android:textSize="16dip" android:text="@string/dia2"
+				    android:layout_gravity="top|left" android:paddingLeft="12dip"
+				/>		
+				<TextView
+				    android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_weight="0"
+				    android:textColor="#FFF" android:textSize="24dip" android:text="@string/pul1"
+				    android:layout_gravity="top|left" android:paddingLeft="12dip"
+				/>		
+				<TextView
+				    android:layout_width="wrap_content" android:layout_height="0px" android:layout_weight="33"
+				    android:textColor="#FFF" android:textSize="16dip" android:text="@string/pul2"
+				    android:layout_gravity="top|left" android:paddingLeft="12dip"
+				/>		
+
+			</LinearLayout>
+		</LinearLayout>
+
+		<LinearLayout android:orientation="horizontal"
+		    android:layout_width="fill_parent" android:layout_height="0px" android:layout_weight="30"
+		>
+		
+			<View
+			    android:layout_width="0px" android:layout_height="fill_parent" android:layout_weight="10"
+			/>
+	
+			<RelativeLayout
+			    android:layout_width="0px" android:layout_height="fill_parent" android:layout_weight="90"
+			>
+				<TextView android:id="@+id/device_branding_line2"
+					android:layout_width="wrap_content" android:layout_height="wrap_content"
+					android:layout_alignParentBottom="true" android:layout_alignParentLeft="true"
+				    android:textColor="#FFF" android:textSize="12dip"
+				/>
+				<TextView android:id="@+id/device_branding_line1"
+					android:layout_width="wrap_content" android:layout_height="wrap_content"
+					android:layout_above="@id/device_branding_line2" android:layout_alignParentLeft="true"
+				    android:textColor="#FFF" android:textSize="12dip"
+				/>
+			</RelativeLayout>
+
+		</LinearLayout>		
+	</LinearLayout>
+
+	<ImageView android:id="@+id/sync"
+		android:layout_width="100dip" android:layout_height="100dip"
+		android:layout_alignParentBottom="true" android:layout_alignParentRight="true"
+		android:paddingBottom="30dip" android:paddingRight="24dip"
+		android:src="@drawable/sync"
+	/>
+
+</RelativeLayout>
